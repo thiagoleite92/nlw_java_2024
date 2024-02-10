@@ -1,4 +1,4 @@
-package br.com.thiagoleite.certification_nlw.modules.students.usecases;
+package br.com.thiagoleite.certification_nlw.modules.students.useCases;
 
 import br.com.thiagoleite.certification_nlw.modules.students.dto.VerifyIfHasCertificationDTO;
 import br.com.thiagoleite.certification_nlw.modules.students.entities.CertificationStudentEntity;

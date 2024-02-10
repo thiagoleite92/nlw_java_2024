@@ -1,5 +1,6 @@
 package br.com.thiagoleite.certification_nlw.modules.students.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,6 +11,7 @@ import jakarta.persistence.ManyToOne;
 import java.time.LocalDateTime;
 import java.util.UUID;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
@@ -18,6 +20,7 @@ import org.hibernate.annotations.CreationTimestamp;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity(name = "answers_certification_students")
+@Builder
 public class AnswersCertificationsEntity {
 
   @Id
@@ -29,6 +32,7 @@ public class AnswersCertificationsEntity {
 
   @ManyToOne
   @JoinColumn(name = "certification_id", insertable = false, updatable = false)
+  @JsonBackReference
   private CertificationStudentEntity certificationStudentEntity;
 
   @Column(name = "student_id")

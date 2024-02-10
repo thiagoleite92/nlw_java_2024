@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import javax.sql.DataSource;
+import lombok.NonNull;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
@@ -11,7 +12,7 @@ public class CreateSeed {
 
   private final JdbcTemplate jdbcTemplate;
 
-  public CreateSeed(DataSource dataSource) {
+  public CreateSeed(@NonNull DataSource dataSource) {
     this.jdbcTemplate = new JdbcTemplate(dataSource);
   }
 
